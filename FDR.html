@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Centro de Educación Media Gubernamental Franklin Delano Roosevelt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0c0c0c;
+            color: #333;
+        }
+
+        header {
+            background-image: url('C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/329303049_539787948216133_5362399080700933461_n.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(165, 38, 38, 0.7);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .item {
+            border: 5px solid #4CAF50;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px;
+            width: calc(25% - 22px);
+            display: inline-block;
+            vertical-align: top;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: bounceIn 0.6s forwards;
+            animation-delay: 0.1s;
+            position: relative;
+        }
+
+        .item:hover {
+            transform: translateY(-20px);
+            filter: blur(2px);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .bubble {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .item {
+                width: calc(100% - 22px);
+            }
+            
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Centro de Educación Media Gubernamental Franklin Delano Roosevelt</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('quienes-somos')">Quiénes Somos</a></li>
+            <li><a href="#" onclick="showSection('logros')">Logros</a></li>
+            <li><a href="#" onclick="showSection('servicios')">Servicios</a></li>
+            <li><a href="#" onclick="showSection('carreras')">Ofertas Académicas</a></li>
+            <li><a href="#" onclick="showSection('promocion')">Promoción de Colegio y Carrera</a></li>
+            <li><a href="#" onclick="showSection('contacto')">Contacto</a></li>
+            <li><a href="#" onclick="showSection('promo')">Promo 2024</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="quienes-somos" class="section">
+        <h2>Quiénes Somos</h2>
+        <p>El Centro de Educación Media Gubernamental Franklin Delano Roosevelt es una institución educativa ubicada en Puerto Cortés, Honduras, que se dedica a proporcionar una educación de calidad a estudiantes de educación secundaria. Nuestro compromiso es fomentar el desarrollo integral de los jóvenes, preparándolos tanto académicamente como en valores éticos y sociales.</p>
+    </section>
+
+    <section id="carreras" class="section">
+        <h2>Ofertas Académicas</h2>
+        <p>Ofrecemos los siguientes bachilleratos:</p>
+        <ul>
+            <li>Bachillerato en Informática</li>
+            <li>Bachillerato en Contaduría y Finanzas</li>
+            <li>Bachillerato en Ciencias y Humanidades</li>
+            <li>Bachillerato en Banca y Finanzas</li>
+            <li>Bachillerato en Administración Hotelera</li>
+            <li>Bachillerato en Construcciones Metálicas</li>
+            <li>Bachillerato en Robótica</li>
+            <li>Bachillerato en Marítimo Portuario</li>
+        </ul>
+    </section>
+
+    <section id="logros" class="section">
+        <h2>Logros</h2>
+        <p>Nuestros estudiantes han obtenido excelentes resultados en competencias académicas y deportivas.</p>
+        <p>Estamos orgullosos de nuestros graduados que continúan su educación en instituciones de prestigio.</p>
+    </section>
+
+    <section id="servicios" class="section">
+        <h2>Servicios</h2>
+        <p>Además de educación de calidad, ofrecemos:</p>
+        <ul>
+            <li>Orientación académica y personal</li>
+            <li>Actividades extracurriculares</li>
+            <li>Programas de deportes y arte</li>
+            <li>Servicios de apoyo psicológico</li>
+        </ul>
+    </section>
+
+    <section id="promocion" class="section">
+        <h2>Promoción de Colegio y Carrera</h2>
+        <p>En el Centro de Educación Media Gubernamental Franklin Delano Roosevelt, estamos comprometidos a guiar a nuestros estudiantes en su transición hacia la educación superior y el mundo laboral.</p>
+        <p><strong>Promoción del colegio</strong></p>
+        <video width="640" height="360" controls>
+            <source src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promocion de colegio.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p><strong>Promoción BTP Informática</strong></p>
+        <video width="640" height="360" controls>
+            <source src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promodecarrera.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </section>
+
+    <section id="promo" class="section">
+        <h2>Logros Promocionales</h2>
+        <div class="bubble" id="bubble"></div>
+        <div class="item" onclick="showText('¡Daniela Rivera!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.43.07 PM.jpeg" alt="Item 1">
+        </div>
+        <div class="item" onclick="showText('¡Arnoldo Alvarega!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.47.46 PM.jpeg" alt="Item 2">
+        </div>
+        <div class="item" onclick="showText('¡Lohany Ortiz!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 8.02.09 PM.jpeg" alt="Item 3">
+        </div>
+        <div class="item" onclick="showText('¡Yurit Mejia!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 8.10.19 PM.jpeg" alt="Item 4">
+        </div>
+        <div class="item" onclick="showText('¡Elsa Gallardo!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 8.18.20 PM.jpeg" alt="Item 5">
+        </div>
+        <div class="item" onclick="showText('¡Meylin Alvarado!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 8.21.03 PM.jpeg" alt="Item 6">
+        </div>
+        <div class="item" onclick="showText('¡Kenny Gomez!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 8.23.13 PM.jpeg" alt="Item 7">
+        </div>
+        <div class="item" onclick="showText('¡Andrea Benitez!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 10.11.43 PM.jpeg" alt="Item 8">
+        </div>
+        <div class="item" onclick="showText('¡Nayeli Murillo!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 10.12.58 PM.jpeg" alt="Item 9">
+        </div>
+        <div class="item" onclick="showText('¡Zuleyka Castro!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 10.18.39 PM.jpeg" alt="Item 10">
+        </div>
+        <div class="item" onclick="showText('¡Kritza Aguirre!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-24 at 7.39.51 AM (1).jpeg" alt="Item 11">
+        </div>
+        <div class="item" onclick="showText('¡Alex Mejia!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-24 at 7.53.32 AM.jpeg" alt="Item 12">
+        </div>
+        <div class="item" onclick="showText('¡abigail Cardona!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-24 at 7.53.32 AM.jpeg" alt="Item 13">
+        </div>
+        <div class="item" onclick="showText('¡Astrid Chavez!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.12.43 PM.jpeg" alt="Item 14">
+        </div>
+        <div class="item" onclick="showText('¡Erick Morales!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.30.51 PM.jpeg" alt="Item 15">
+        </div>
+        <div class="item" onclick="showText('¡Carolina Herrera!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.32.29 PM.jpeg" alt="Item 16">
+        </div>
+        <div class="item" onclick="showText('¡Rachelle Murillo!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.37.45 PM.jpeg" alt="Item 17">
+        </div>
+        <div class="item" onclick="showText('¡Erwin Lopez!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.44.41 PM.jpeg" alt="Item 18">
+        </div>
+        <div class="item" onclick="showText('¡Heydi Amaya!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 7.55.51 PM.jpeg" alt="Item 19">
+        </div>
+        <div class="item" onclick="showText('¡Nuevo Estudiante!')" style="animation-delay: 1ms;">
+            <img src="C:/Users/AMERIQUYTO/OneDrive/Escritorio/diseño web 2 semestre 2P/promo 24/WhatsApp Image 2024-10-23 at 8.17.36 PM.jpeg" alt="Item 20">
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Centro de Educación Media Gubernamental Franklin Delano Roosevelt</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showText(text) {
+        const bubble = document.getElementById('bubble');
+        bubble.textContent = text;
+        bubble.style.display = 'block';
+        setTimeout(() => {
+            bubble.style.display = 'none';
+        }, 2000);
+    }
+
+    // Show the "Quiénes Somos" section by default
+    showSection('quienes-somos');
+</script>
+
+</body>
+</html>
